@@ -504,7 +504,7 @@ string WrapText(string text, int maxWidth)
         organizationName = Console.ReadLine();
 
         id.AddMessage(Environment.NewLine + "Enter your Azure DevOps personal access token:");
-        accessToken = init.ReadSecret();
+        accessToken = Environment.GetEnvironmentVariable("ADO_PAT");
 
         authScheme = "Basic";
     }
