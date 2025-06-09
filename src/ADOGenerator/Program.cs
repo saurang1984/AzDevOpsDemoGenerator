@@ -29,14 +29,8 @@ do
 {
     string id = Guid.NewGuid().ToString().Split('-')[0];
     Console.ForegroundColor = ConsoleColor.Cyan;
-    Console.WriteLine("Do you want to create a new template or create a new project using the demo generator project template?");
-    Console.WriteLine("1. Create a new project using the demo generator project template");
-    Console.WriteLine("2. Generate new artifacts using an existing project.");
-    Console.ResetColor();
-    id.AddMessage(Environment.NewLine+"Enter the option number from the list of options above:");
-    var userChoiceTemplate = Console.ReadLine();
 
-    switch (userChoiceTemplate)
+    switch (1)
     {
         case "1":
             HandleNewProjectCreation(configuration, id);
