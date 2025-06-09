@@ -59,35 +59,6 @@ do
     }
 
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine(Environment.NewLine+"Do you want to create another project? (yes/no): press enter to confirm");
-    Console.ResetColor();
-    var createAnotherProject = Console.ReadLine();
-    if (string.IsNullOrWhiteSpace(createAnotherProject) || createAnotherProject.Equals("yes", StringComparison.OrdinalIgnoreCase) || createAnotherProject.Equals("y", StringComparison.OrdinalIgnoreCase))
-    {
-        if (authChoice == "2")
-        {
-            authenticationDetails = null;
-        }
-        else
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Do you want to use the existing authentication details? (yes/no): press enter to confirm");
-            Console.ResetColor();
-            var useExistingAuth = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(useExistingAuth) || useExistingAuth.Equals("yes", StringComparison.OrdinalIgnoreCase) || useExistingAuth.Equals("y", StringComparison.OrdinalIgnoreCase))
-            {
-                if (authenticationDetails != null)
-                {
-                    authenticationDetails = (authenticationDetails.Value.accessToken, null, authenticationDetails.Value.authScheme);
-                }
-            }
-            else
-            {
-                authenticationDetails = null;
-            }
-        }
-        continue;
-    }
 
     id.AddMessage("Exiting the application.");
     Environment.Exit(0);
