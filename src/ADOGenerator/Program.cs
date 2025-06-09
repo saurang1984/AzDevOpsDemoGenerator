@@ -30,7 +30,7 @@ do
     string id = Guid.NewGuid().ToString().Split('-')[0];
     Console.ForegroundColor = ConsoleColor.Cyan;
 
-    switch (1)
+    switch ("1")
     {
         case "1":
             HandleNewProjectCreation(configuration, id);
